@@ -1,0 +1,108 @@
+$header1: 4rem;
+$header2: 5rem;
+$header3: 3.5rem;
+$header4: 2rem;
+$text: 3rem;
+$background-color: rgb(78, 49, 75);
+$gradient: linear-gradient(left, #dad8dd, #dad1d4);
+$grey-text: #525252;
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "intro";
+@import "about";
+@import "gallery";
+@import "contact";
+
+@keyframes plantanime {
+  from {
+    transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  }
+  to {
+    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes plantshake {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .intro {
+    width: 100%;
+  }
+  .plant {
+    z-index: -3;
+  }
+  .intro-text {
+    z-index: 5;
+  }
+  .about h5 {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    top: 15%;
+  }
+  .gallery img {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  .gallery-text {
+    p {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+  }
+  .contact img {
+    display: none;
+  }
+  footer {
+    h3 {
+      @include flex(center, cnter, row);
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 668px) {
+  html {
+    font-size: 50%;
+  }
+
+  .main-head {
+    text-align: center;
+
+    ul {
+      padding-bottom: 1rem;
+    }
+  }
+  .intro {
+    width: 100%;
+  }
+  .gallery-text {
+    display: none;
+  }
+}

@@ -1,0 +1,72 @@
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    display: block;
+    margin: 3rem 0rem 1rem 0rem;
+    font-size: 2.8rem;
+  }
+
+  input {
+    display: block;
+    background-color: #414141;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    margin: 0.5rem 0rem;
+  }
+
+  button {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    background: white;
+    border: 2px solid black;
+    cursor: pointer;
+    color: rgb(94, 83, 83);
+    width: 100%;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background: #7c7676;
+      color: white;
+    }
+  }
+}
+.contact-text {
+  @include flex(center, center, column);
+  flex: 2 1 40rem;
+}
+.contact img {
+  flex: 1 1 40rem;
+}
+
+.contact-text h2 {
+  font-size: 5rem;
+  margin-top: 5rem;
+}
+.contact-text span {
+  font-size: 7rem;
+  color: #7c7676;
+}
+
+footer {
+  min-height: 10vh;
+  background: #414141;
+  display: flex;
+  align-items: center;
+  padding: 2rem 2%;
+  flex-wrap: wrap;
+  h3 {
+    @include flex(flex-start, center, row);
+    flex: 2 1 40rem;
+    color: white;
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}

@@ -1,0 +1,57 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-img {
+  flex: 1 1 40rem;
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  h5 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 6rem;
+    transform: translate(-50%, -25%);
+    letter-spacing: 2rem;
+    padding: 1rem 2rem 1rem 3rem;
+  }
+}
+.about-text {
+  flex: 1 1 40rem;
+  background: #414141;
+  @include flex(flex-start, center, column);
+
+  h2 {
+    padding-top: 10rem;
+    color: white;
+    font-family: "Great Vibes", cursive;
+  }
+
+  .about-life {
+    margin: 5rem 9rem;
+    color: white;
+    h3 {
+      margin: 3rem 0rem;
+    }
+  }
+  .about-work {
+    margin: 5rem 9rem;
+    color: white;
+    h3 {
+      margin: 3rem 0rem;
+    }
+  }
+  .about-contact {
+    margin: 5rem 9rem;
+    color: white;
+    h3 {
+      margin: 3rem 0rem;
+    }
+  }
+}
